@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %> 
+
+    <%- include('partials/nav.ejs') %>
+    <h1>All Users</h1>
+    <ul>
+        <% if (users.length>0) { %>
+            <% users.forEach(user => { %>
+                <li><%= user.userName %> </li>
+            <% }) %>
+            
+            <h2>Add users at the <a href="/">home</a> page</h2>
+        <% } else { %>
+            <h1>No Users added</h1>
+        
+            <h2>Add users at the <a href="/">home</a> page</h2>
+        <% } %>         
+    </ul>
+
+<%- include('partials/footer.ejs') %>
